@@ -1,0 +1,65 @@
+<html>
+<head>
+<script>
+function validateLog()
+{
+var n1=document.getElementById("f1").value;
+var n2=document.getElementById("f2").value;
+var n3=document.getElementById("f3").value;
+var n4=document.getElementById("f4").value;
+var n5=document.getElementById("f5").value;
+var n6=document.getElementById("f6").value;
+var n7=document.getElementById("f7").value;
+var n8=document.getElementById("f8").value;
+var n9=document.getElementById("f9").value;
+
+if(n1==""||n2==""||n3==""||n4==""||n5==""||n6==""||n7==""||n8==""||n9=="")
+{
+alert("all fields must be filled");
+}
+if(n4!=n5)
+alert("password dont match");
+
+if(isNaN(n9))
+{
+alert("invalid phone number")
+}
+
+if(n9.length!=10)
+alert("invalid phone number");
+
+else
+{
+alert("account created");
+}
+
+}
+</script>
+</head>
+
+
+
+
+<body background="s.png">
+<pre><a href="catalogue.html">catalogue</a>    <a href="collections.html">collections</a>    <a href="aboutus.html">aboutus</a>    <a href="newspapers.html">newspapers</a>    <a href="cs.html">comments&suggestions</a></pre>
+
+<center><font size=10 color="pink">Personal Information</font></center>
+<pre>
+<form>
+<center>
+FirstName:	<input type="text" id="f1" value="jack" ><br><br>
+LastName :	<input type="text" id="f2" value="bob" ><br><br>
+username :	<input type="text" id="f3" value="abc"><br><br>
+password :	<input type="password" id="f4" value="ssncollegeofengineering"><br><br>
+DOB      :	<input type="text" id="f6" value="27/01/1992"><br><br>
+Gender   :	<input type="text" id="f7" value="M"><br><br>
+Email    :  <input type="text" id="f8" value="jackmca@yahoo.com"><br><br>
+Ph.number:	<input type="text" id="f9" value="8812409123"><br><br>
+
+<input type="button" value="Ok">   <input type="button" value="Cancel">
+</form>
+</pre>
+</center>
+<a href="main.html">Go back to menu</a>
+</body>
+</html>

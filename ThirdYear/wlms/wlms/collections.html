@@ -1,0 +1,65 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="link.css" title="style1"/>
+
+<link rel="alternate stylesheet" 
+type="text/css" href="table.css"
+title="style2" />
+<style>
+img
+{
+float:right;
+}
+</style>
+
+<script>
+function change()
+{
+x=document.getElementById("jsc");  // Find the element
+x.innerHTML="BOOK COLLECTION";    // Change the content
+}
+
+
+</script>
+</head>
+
+<body background="s.png">
+
+<pre><a href="catalogue.html">catalogue</a>    <a href="collections.html">collections</a>    <a href="aboutus.html">aboutus</a>    <a href="newspapers.html">newspapers</a>    <a href="cs.html">comments&suggestions</a></pre>
+<pre><font size="10" id="jsc">Details About Books In The Library</font>          <input type="button" onclick="change()" VALUE="Click Me"></pre>
+
+<img src="book.jpg" width="200" height="120" />
+<table border="15" align="center" bgcolor="white" cellspacing="10" cellpadding="10">
+ <caption align="top"><font size="10" color="yellow">COLLECTIONS</font></caption>
+  <tr>
+    <th>DEPARTMENT</th>
+    <th>NUMBER OF BOOKS</th>
+
+  </tr>
+  <tr>
+    <td><b>Computer Science</b></td>
+    <td><b>1000</b></td>
+</tr>
+  <tr>
+    <td><b>Electronics</b></td>
+    <td><b>800</b></td>
+  </tr>
+ <tr>
+    <td><b>Electrical</b></td>
+    <td><b>700</b></td>
+  </tr>
+   <tr>
+    <td><b>Mechanical</b></td>
+    <td><b>500</b></td>
+  </tr>
+  
+     <tr>
+    <td><b>Total</b></td>
+    <td><b>3000</b></td>
+  </tr>
+</table>
+<div class="ex"><a href="main.html">Go back to menu</a> </div>
+
+
+</body>
+</html>

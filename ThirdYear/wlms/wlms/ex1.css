@@ -1,0 +1,43 @@
+<style type="text/css">
+<!simple selector>
+h1
+{
+font-size:5pt;
+color:red;
+}
+h2,h3
+{
+font-family:script;
+font-size:28pt;
+color:blue;
+}
+
+<!universal selector>
+*{
+color:green;
+}
+
+<! class selector>
+h1.redtext
+{
+font-family:arial;
+color:red;
+font-size:10pt;
+}
+
+<!Generic selector>
+.redText
+{
+font-family:Monotype corosiva;
+color;blue;
+}
+
+<!id selector>
+#top
+{
+font-family:arial;
+color:blue;
+font-size:16pt;
+}
+
+</style>

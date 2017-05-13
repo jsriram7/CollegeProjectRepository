@@ -1,0 +1,64 @@
+                                       <!LIBRARY MANAGEMENT>
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="link.css">
+<title>
+Login
+</title>
+<script type="text/javascript">
+function avalidateLog()
+{
+var n=document.getElementById("a_log").value;
+var m=document.getElementById("a_pwd").value;
+
+if(n=="umar"&&m=="1234")
+{
+window.open("admin.html")
+}
+
+else
+alert("Invalid username or password");
+}
+
+function ashow_confirm()
+{
+var r=confirm("Are you want to cancel?");
+if (r==true)
+  {
+  alert("You pressed Ok");
+  }
+else
+  {
+  alert("You pressed cancel");
+  }
+}
+</script>
+</head>
+<body background="sample.jpg">
+
+<!LOGIN>
+
+<h1>INDIAN LIBRARY</h1>
+<h2>Administrator Account<h2>
+<!IMAGE>
+<center>
+<h3>LOGIN</h3>
+<form>
+<label> Username: </label>
+<input type="text" name="username" id="a_log"><br><br>
+<label> Password: </label>
+<input type="password" name="password" id="a_pwd"><br><br>
+</form>
+
+<input  type="button" value="OK" onclick="avalidateLog()" align="right">
+
+
+<input  type="button" value="Cancel" onclick="ashow_confirm()" align="right">
+
+
+
+</center>
+</body>
+</html>

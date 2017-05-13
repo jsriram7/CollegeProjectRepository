@@ -1,0 +1,52 @@
+<html>
+
+<head>
+<script type="text/javascript">
+function startTime()
+{
+var today=new Date();
+var h=today.getHours();
+var m=today.getMinutes();
+var s=today.getSeconds();
+// add a zero in front of numbers<10
+m=checkTime(m);
+s=checkTime(s);
+document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+t=setTimeout('startTime()',500);
+}
+
+function checkTime(i)
+{
+if (i<10)
+  {
+  i="0" + i;
+  }
+return i;
+}
+</script>
+<link rel="stylesheet" type="text/css" href="link.css" title="style1"/>
+<style>
+	
+
+  a {
+ font-size:25;
+ }
+ a:hover {font-size:50;} 
+
+</style>
+  
+  </head>
+<body background="s.png" onload="startTime()">
+<pre>                                     <div id="txt"></div></pre>
+
+<a href="catalogue.html"target="_blank"> catalogue</a><br>
+<a href="collections.html"target="_blank">collections</a><br>
+<a href="aboutus.html"target="_blank">aboutus</a><br>
+<a href="newspapers.html"target="_blank">newspapers</a><br>
+<a href="cs.html"target="_blank">Comments&Suggestions</a><br>
+<a href="login.html"target="_blank">Reservations</b></i></font></a><br>
+<a href="login.html"target="_blank">Check your account<br>
+<a href="signup.html"target="_blank">Signup</b></i></font></a><br>
+<a href="loginadmin.html"target="_blank">Admin</b></i></font></a><br>
+</body>
+</html>

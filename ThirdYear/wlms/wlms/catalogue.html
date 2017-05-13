@@ -1,0 +1,78 @@
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="link.css">
+<style>
+.text_pos
+{
+position:absolute;
+left:100px;
+top:50px;
+font-family:segoe script;
+font-size:50px;
+width:100px;
+}
+div.ex
+{
+width:120px;
+padding:10px;
+border:5px solid gray;
+margin:0px;
+}
+body
+{
+background-color:#b0c4de;
+}
+
+
+</style>
+
+</head>
+<body>
+<script>
+function forValidate()
+{
+var a=document.getElementById("f1").value;
+var b=document.getElementById("f2").value;
+var c=document.getElementById("f3").value;
+var d=document.getElementById("f4").value;
+
+if(a==""||b==""||c==""||d=="")
+	{
+	alert("all fields must be filled");
+	}
+else
+alert("searching");
+}
+</script>
+<pre><a href="catalogue.html">catalogue</a>    <a href="collections.html">collections</a>    <a href="aboutus.html">aboutus</a>    <a href="newspapers.html">newspapers</a>    <a href="cs.html">comments&suggestions</a>        </pre>
+
+<center><font size="6">CATALOGUE</font><br><br>
+<form>
+<pre>
+
+
+       Author Name:<input type="text" id="f1">
+<br><br>
+
+       Title      :<input type="text" id="f2">
+<br><br>
+
+       Publisher  :<input type="text" id="f3">
+<br><br>
+
+       Keywords   :<input type="text" id="f4">
+	   
+</pre>
+<input type="button" onclick="forValidate()" value="Search">
+</form>
+<br><br>
+
+<br><br>
+
+<div class="ex"><a href="main.html">Go back to menu</a> </div>
+
+
+<p class="text_pos">CATALOGUE FOR SEARCHING A BOOK</P>
+</body>
+</html>

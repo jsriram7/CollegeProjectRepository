@@ -1,0 +1,73 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="link.css">
+
+<style>
+body {font-family: Arial, sans-serif; }
+body
+{
+background-image:url('sp.jpg');
+background-repeat:repeat-y;
+}
+div.ex
+{
+width:120px;
+padding:10px;
+border:5px solid gray;
+margin:0px;
+}
+p
+{
+font-style:bold;
+}
+</style>
+
+<script>
+function validate()
+{
+var x=document.getElementById("t0").value;
+if(x=="")
+alert("comment box should not be empty");
+else
+alert("submitting");
+}
+
+
+</script>
+</head>
+<body >
+<pre><a href="catalogue.html">catalogue</a>    <a href="collections.html">collections</a>    <a href="aboutus.html">aboutus</a>    <a href="newspapers.html">newspapers</a>    <a href="cs.html">comments&suggestions</a></pre>
+
+<p style="background:#ccc; color:#fff; border: solid black 1px;">Comments and Suggestions</p>
+<p>If you have specific comments about the website please email the Web Editor.</p>
+</p>To send your request, simply complete this form and click the submit button. <mark>Only the comments and suggestions field is required, the others are optional.</mark></p>
+
+
+
+
+<pre>
+<form name='f1'>
+<font size="16">Comments and Suggestions</font>
+<textarea rows="6" cols="50" id="t0" name="t0"></textarea></br>
+If you have requested a reply and supplied a contact address, you will
+receive a response within 10 working days.
+
+<font size="16">About You</font>
+You may add information below if you wish. However <mark>if you would like a reply you must include a contact address.</mark> 
+The information you provide will be used to improve our services. It will not be passed to third parties.
+<center>
+<label>Title</label>    <input type="text" id="t1"><br><br>
+<label>FirstName</label><input type="text" ><br><br>
+<label>LastName</label> <input type="text" ><br><br>
+<label>Email</label>    <input type="text"><br><br>
+<label>Phone</label>    <input type="text"><br><br>
+<label>City</label>     <input type="text"><br><br>
+<label>Country</label>  <input type="text"><br><br>
+
+<input type="button" onclick="validate()" value="Submit">   <input type="reset" value="Clear Form">
+</pre>
+</form>
+</center>
+<div class="ex"><a href="main.html">Go back to menu</a> </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<html>
+
+<head>
+<style type="text/css">@import url("link.css");</style>
+
+<style>
+div.ex
+{
+width:120px;
+padding:10px;
+border:5px solid gray;
+margin:0px;
+}
+p
+{
+background-color:#e0ffff;
+}
+
+</style>
+<script language="JavaScript" type="text/javascript">
+
+if (document.getElementById) {
+document.writeln('<style type="text/css"><!--')
+document.writeln('.texter {display:none} @media print {.texter {display:block;}}')
+document.writeln('//--></style>') }
+
+function openClose(theID) {
+if (document.getElementById(theID).style.display == "block") { document.getElementById(theID).style.display = "none" }
+else { document.getElementById(theID).style.display = "block" } }
+// -->
+
+function validateGo()
+{
+var x=document.getElementById("g1").value;
+if(x=="")
+alert("search box is empty");
+else
+alert("searching");
+}
+</script>
+
+</head>
+<body>
+<pre><a href="catalogue.html">catalogue</a>    <a href="collections.html">collections</a>    <a href="aboutus.html">aboutus</a>    <a href="newspapers.html">newspapers</a>    <a href="cs.html">comments&suggestions</a>        </pre>
+
+<img src="banner.jpg" width="1000" height="100">
+
+<p style="background:#ccc; color:#fff; border: solid black 1px;">Contact us</p>
+<p>Switchboard: +44 (0)843 2081144</p>
+<p>Customer Services: +44 (0)1937 546060</p>
+<p>Minicom (for the use of the hearing impaired): +44 (0)1937 546434</p>
+<p>Email: Customer-Services@il.in</p>
+<p>If you have any questions or problems with our services, you can speak to our Customer Services Team </p>
+<p>between 08.30 and 19.00 (Indian time), <mark>Monday to Friday</mark>,except when the Library is closed for a public holiday.</p>
+
+<font size="3" color="green">Search About us</font><br>
+<input type="text" id="g1">
+<input type="button" onclick="validateGo()" value="Go"> <br>
+<a href="search_tips.html">Search tips</a>
+		
+	
+<div onClick="openClose('a1')" style="cursor:hand; cursor:pointer"><b>What can I search for?</b></div>
+<div id="a1" class="texter">
+The search box at the top can be used to search for books many thousands of images and sounds you can enjoy right now. 
+You can refine your catalogue search to just get results.If there is any other queries you can ask in comments and suggestions section. <br /><br />
+</div>
+<br>
+
+<div onClick="openClose('a2')" style="cursor:hand; cursor:pointer"><b>Can anyone visit the Indian Library?</b></div>
+<div id="a2" class="texter">
+Anyone is welcome to visit the Indian Library's main building at 96 Mount road in chennai.
+Any query regarding landmark and other routes information can be obtained by calling customer services. 
+<br /><br />
+</div>
+<br>
+
+<div onClick="openClose('a3')" style="cursor:hand; cursor:pointer"><b>How can I obtain copies of books and other material from the Library? Does
+ the Library allow people to borrow books?</b></div>
+<div id="a3" class="texter">Yes<br /><br />
+</div>
+<div class="ex"><a href="main.html">Go back to menu</a> </div>
+
+</body>
+</html>

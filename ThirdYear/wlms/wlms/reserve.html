@@ -1,0 +1,47 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="link.css">
+</head>
+
+<body>
+<script>
+function forValidate()
+{
+var a=document.getElementById("f1").value;
+var b=document.getElementById("f2").value;
+var c=document.getElementById("f3").value;
+var d=document.getElementById("f4").value;
+
+if(a==""||b==""||c==""||d=="")
+	{
+	alert("all fields must be filled");
+	}
+else
+alert("Reserved");
+}
+</script>
+<center>RESERVATIONS</center>
+<form>
+<pre>
+<center>
+Author Name:<input type="text" id="f1">
+<br><br>
+
+Title      :<input type="text" id="f2">
+<br><br>
+
+Publisher  :<input type="text" id="f3">
+<br><br>
+
+Keywords   :<input type="text" id="f4">
+
+
+
+<input type="button" onclick="forValidate()" value="Reserve">
+<br>
+</form>
+<A href="main.html">Go back to menu</A>
+</pre>
+
+</body>
+</html>

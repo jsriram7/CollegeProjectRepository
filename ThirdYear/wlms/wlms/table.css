@@ -1,0 +1,36 @@
+<style>
+img 
+{
+float:right;
+}
+div.ex
+{
+width:120px;
+padding:10px;
+border:5px solid gray;
+margin:0px;
+}
+table,th,td
+{
+
+border:1px solid green;
+}
+th
+{
+background-color:pink;
+color:white;
+height:75px;
+}
+table
+{
+width:50%;
+}
+td
+{
+text-align:center;
+height:50px;
+vertical-align:bottom;
+}
+
+
+</style>

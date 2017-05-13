@@ -1,0 +1,184 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0" />
+<meta name="ProgId" content="FrontPage.Editor.Document" />
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<title>The div Expand and Collapse control function</title>
+<link href="DivControlFunction.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" type="text/javascript">
+<!-- Acknowledgements                                                 -->
+<!-- 	Written by:  Michael Lindstamer (lindy060157@q.com)           -->
+<!-- 	Web Site:    http://lindstamer.com                            -->
+<!-- Begin
+function ExpandCollapse(ElementId) {
+	var ClickedElement = document.getElementById(ElementId);
+	var SectionElement = ClickedElement.parentNode;
+	var GroupElement = SectionElement.parentNode;
+	var SpanSiblings = SectionElement.getElementsByTagName("span");
+	var DivSiblings = SectionElement.getElementsByTagName("div");
+	if (ClickedElement.innerHTML == "-") {
+		// this code turns this section off
+		ClickedElement.innerHTML = "+";
+		SpanSiblings[1].innerHTML = "Show";
+		DivSiblings[0].style.display = "none";
+	} else {
+		// this code turns this section on and all other sections off
+		ClickedElement.innerHTML = "-";
+		SpanSiblings[1].innerHTML = "Hide";
+		DivSiblings[0].style.display = "block";
+		var otherSections = GroupElement.getElementsByTagName("div");
+		for (i=0; i<otherSections.length; i++) {
+			// first make sure this div is an immediate child of the parent group
+			if (otherSections[i].parentNode.id == GroupElement.id ) {
+				// next make sure this section is not the one you just expanded
+				if (otherSections[i].id != SectionElement.id) {
+					// collapse this section
+					var x = document.getElementById(otherSections[i].id);
+					var SpanSiblings = x.getElementsByTagName("span");
+					var DivSiblings = x.getElementsByTagName("div");
+					SpanSiblings[0].innerHTML = "+";
+					SpanSiblings[1].innerHTML = "Show";
+					DivSiblings[0].style.display = "none";
+				}
+			}
+		}
+	}
+}
+//  End -->
+</script>
+</head>
+<body>
+<h1>The &#60;div... Expand/Collapse control function</h1>
+<p>Have you ever created a web page that had so much information on it 
+that some of the key information seems to get lost in all the detail?  This web page displays information
+about a function that will allow you to list key information and hide the details.  Your users have the option
+of expanding detail sections, and the function handles hiding all the other sections.</p>
+<p class="c-note">(click on the &quot;+&quot; signs to expand each division)</p>
+<div id="group1">
+	<div id="section1">
+		First define a group; 
+		<span id="tick1" class="clickit" onclick="ExpandCollapse(this.id);">+</span>
+		<span id="act1">Show</span> group details.
+		<div id="text1" style="display: none;">
+			<p class="the-data">A group is a collection of sections that you 
+            wish to dynamically expand or collapse.  When 
+			one section is expanded, all other sections in this group are collapsed. You can define multiple groups on a single 
+			page as long as each has its own unique ID. The function will control each group independently.</p>
+			<p class="the-data">You define a group with a '&#60;div ...' HTML tag.  The key is to include the 'id= ...' attribute, 
+			and make sure each group has a unique id.</p>
+			<p class="c-note">&#60;div id="<i>unique_id</i>"&#62;</p>
+			</div>
+		</div>
+	<hr width="50%" />
+	<div id="section2">
+		Second define your sections;
+		<span id="click2" class="clickit" onclick="ExpandCollapse(this.id);">+</span>
+		<span id="action2">Show</span> section details.
+		<div id="div2" style="display: none;">
+			<p class="the-data">A section is a collection of HTML elements used
+			to identify and control the 'div's you want to expand and collapse.  You can define as many sections as you need, 
+			the function will find them.</p>
+			<p class="the-data">Sections must be defined with the '&#60;div ...' 
+			HTML tag, and just like the group, each section must have a unique id.</p>
+			<p class="c-note">&#60;div id="<i>unique_id</i>"&#62;</p>
+			</div>
+		</div>
+	<hr width="50%" />
+	<div id="section3">
+		Third define the elements of each section;
+		<span id="span3" class="clickit" onclick="ExpandCollapse(this.id);">+</span>
+		<span id="action3">Show</span> details for the elements.
+		<div id="div3" style="display: none;">
+			<p class="the-data">There are three key HTML elements inside a section. Two '&#60;span ...' HTML tags and one 
+			'&#60;div ...' HTML tag.  They should be coded as follows: (style atributes can be moved into a style sheet)</p>
+			<br />
+			<p class="the-data">&#60;span id="<i>unique_id</i>" onclick="ExpandCollapse(this.id);" style="cursor: pointer;"&#62;+&#60;/span&#62;</p>
+			<p class="the-data">&#60;span id="<i>unique_id</i>"&#62;Show&#60;/span&#62;</p>
+			<p class="the-data">&#60;div id="<i>unique_id</i>" style="display: none;"&#62;</p>
+			<p class="the-data" style="margin-left: .75in"><i>The detail information you want to expand and collapse goes here.</i></p>
+			<p class="the-data" style="margin-left: .75in">&#60;/div&#62;</p>
+			<div id="group2" style="margin-top: .1in; margin-left: .5in; background-color: #99FFFF; width:90%">
+				<div id="section21">
+					<span id="span21" class="clickit" onclick="ExpandCollapse(this.id);">+</span>
+					<span id="action21">Show</span> details for the first span element.
+					<div id="div21" style="display: none;">
+						<p class="the-data">The first span tag calls the function, and should be initialized with a "+" sign. 
+						This is because the function assumes all sections start in the collapsed state. Your user's	first 
+						action should be to expand a section. When a user expands a section the function will change the "+" 
+						to a "-" or vise-versa in this span tag.</p>
+						</div>
+					</div>
+				<div id="section22">
+					<span id="span22" class="clickit" onclick="ExpandCollapse(this.id);">+</span>
+					<span id="action22">Show</span> details for the second span element.
+					<div id="div22" style="display: none;">
+						<p class="the-data">The second span tag is changed by the function from "Show" to "Hide" and
+						 vice-versa when a user clicks on the "+" or "-" control for the section.</p>
+						</div>
+					</div>
+				<div id="section23">
+					<span id="span23" class="clickit" onclick="ExpandCollapse(this.id);">+</span>
+					<span id="action23">Show</span> details for the div element.
+					<div id="div23" style="display: none;">
+						<p class="the-data">The div tag is initially defined with the "display: none;" style.  This is the 
+						collapsed state for a section.  The function will change this to "block" to expand the section, 
+						and back to "none" to collapse it again.</p>
+						</div>
+					</div>
+				</div>
+			<br />
+			<p class="the-data" >"+", "Show", and "none" are the control values of a collapsed section.</p>
+			<p class="the-data" >"-", "Hide", and "block" are the control values of an expanded section.</p>
+			</div>
+		</div>
+	<hr width="50%" />
+	<div id="section4">
+		Close your sections and group:
+		<span id="span4" class="clickit" onclick="ExpandCollapse(this.id);">+</span>
+		<span id="action4">Show</span> closing detail.
+		<div id="div4" style="display: none;">
+			<p class="the-data">Don't forget to "close" all your sections and your group.  HTML is still kind-of picky about 
+			closing tags.  Besides, if you don't include the closing tags, the function will not be able to determine where 
+			one section ends and the next section begins.  Close each section with:</p>
+			<p class="c-note">&#60;/div&#62;</p>
+			<p class="the-data">And close your group with:</p>
+			<p class="c-note">&#60;/div&#62;</p>
+			</div>
+		</div>
+	<hr width="50%" />
+	<div id="section5">
+		Other information:
+		<span id="span5" class="clickit" onclick="ExpandCollapse(this.id);">+</span>
+		<span id="action5">Show</span> additional detail.
+		<div id="div5" style="display: none;">
+			<p class="the-data">Of course you can add other text before, after, and around the elements described in the 
+			previous section.  You can even include other HTML elements. Just make sure the two span elements described 
+			above are the first two span elements in the section, and the div element described above is the first div 
+			element in the section.  The function expects these elements to be the first elements it finds in a section.</p>
+			<p class="the-data">In case you are wondering, this web page uses the function described here. So you can 
+			view the source of this page to help determine how to use the function.  You may have also noticed that there 
+			are two expand/collapse groups in this page.  The second group is embedded inside the third section of the first 
+			group.  The function can handle it.</p>
+			<p class="the-data">You want to get a little more complex?  On one of my other web sites I used this function 
+			inside a form element to break up and organize the form's input elements.</p>
+			<p class="the-data">Since the function (yes it is a single function) is only about 30 lines long, you should 
+			be able to simply cut it out of the source of this web page and paste it in your web page.</p>
+			</div>
+		</div>
+	<hr width="50%" />
+</div>
+<p>I tried to keep this function as simple as possible, so that it could be inserted into nearly any web page. It 
+can be used inside forms, frames, and tables. As far as I know you can put just about anything inside the collapsible 
+division, including another expand/collapse group.</p>
+<p>The function depends on the relative position of the elements inside each section. This eliminates the necessity 
+for a specific naming convention for the elements, sections, and groups.</p>
+<p class="c-note">
+	<a href="http://validator.w3.org/check?uri=referer">
+	<img src="images/valid-xhtml10-blue.png" alt="Valid XHTML 1.0 Transitional" height="31" width="88" />
+	</a>
+</p>
+</body>
+</html>
