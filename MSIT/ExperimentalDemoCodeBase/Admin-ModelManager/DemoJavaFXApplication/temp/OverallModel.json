@@ -1,0 +1,47 @@
+{
+  "version" : "1",
+  "derivedFrom" : null,
+  "nodes" : [ {
+    "name" : "code",
+    "properties" : {
+      "textAreaProperties" : [ ],
+      "dropDownProperties" : [ ],
+      "textBoxProperties" : [ ]
+    },
+    "linkedTo" : [ "requirement" ]
+  }, {
+    "name" : "design",
+    "properties" : {
+      "textAreaProperties" : [ {
+        "type" : "textarea",
+        "label" : "message",
+        "isRequired" : "No"
+      } ],
+      "dropDownProperties" : [ {
+        "type" : "dropdown",
+        "defaultValue" : "Inprogress",
+        "label" : "status",
+        "values" : [ "Completed", "Inprogress" ],
+        "isRequired" : "Yes"
+      } ],
+      "textBoxProperties" : [ {
+        "type" : "textbox",
+        "label" : "version",
+        "isRequired" : "Yes"
+      } ]
+    },
+    "linkedTo" : [ "requirement" ]
+  }, {
+    "name" : "requirement",
+    "properties" : {
+      "textAreaProperties" : [ ],
+      "dropDownProperties" : [ ],
+      "textBoxProperties" : [ {
+        "type" : "textbox",
+        "label" : "id",
+        "isRequired" : "Yes"
+      } ]
+    },
+    "linkedTo" : [ "design", "code" ]
+  } ]
+}

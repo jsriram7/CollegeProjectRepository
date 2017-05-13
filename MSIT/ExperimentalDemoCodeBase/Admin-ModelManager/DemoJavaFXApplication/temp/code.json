@@ -1,0 +1,9 @@
+{
+  "name" : "code",
+  "properties" : {
+    "textAreaProperties" : [ ],
+    "dropDownProperties" : [ ],
+    "textBoxProperties" : [ ]
+  },
+  "linkedTo" : [ "requirement" ]
+}

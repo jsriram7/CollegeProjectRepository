@@ -1,0 +1,23 @@
+{
+  "name" : "design",
+  "properties" : {
+    "dropDownProperties" : [ {
+      "type" : "dropdown",
+      "defaultValue" : "Inprogress",
+      "label" : "status",
+      "values" : [ "Completed", "Inprogress" ],
+      "isRequired" : "Yes"
+    } ],
+    "textBoxProperties" : [ {
+      "type" : "textbox",
+      "label" : "version",
+      "isRequired" : "Yes"
+    } ],
+    "textAreaProperties" : [ {
+      "type" : "textarea",
+      "label" : "message",
+      "isRequired" : "No"
+    } ]
+  },
+  "linkedTo" : [ "requirement" ]
+}

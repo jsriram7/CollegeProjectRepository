@@ -1,0 +1,13 @@
+{
+  "name" : "requirement",
+  "properties" : {
+    "textAreaProperties" : [ ],
+    "dropDownProperties" : [ ],
+    "textBoxProperties" : [ {
+      "type" : "textbox",
+      "label" : "id",
+      "isRequired" : "Yes"
+    } ]
+  },
+  "linkedTo" : [ "design", "code" ]
+}

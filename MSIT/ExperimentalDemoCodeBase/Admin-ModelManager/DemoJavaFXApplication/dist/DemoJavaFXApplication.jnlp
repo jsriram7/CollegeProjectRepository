@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="DemoJavaFXApplication.jnlp">
+  <information>
+    <title>DemoJavaFXApplication</title>
+    <vendor>Welcome</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="DemoJavaFXApplication.jar" size="2350" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="DemoJavaFXApplication" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="demojavafxapplication.DemoJavaFXApplication"  name="DemoJavaFXApplication" />
+  <update check="always"/>
+</jnlp>
